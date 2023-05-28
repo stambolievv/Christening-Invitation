@@ -1,2 +1,2 @@
 # Christening Invitation
-🎗️ Beautiful Custom Paperless Christening Invitations 🎗️
+🎗️ Beautiful Custom Paperless Mobile-First Christening Invitation 🎗️
