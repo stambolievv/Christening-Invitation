@@ -45,4 +45,7 @@ export const invitation = (prop, path) => html`
     </div>
     <img class="separator" src="${path}/assets/images/balloons.png" alt="" />
   </section>
+  <footer>
+    <p>Очакваме Вашето потвърждение до 20.08.2023г.</p>
+  </footer>
 `;

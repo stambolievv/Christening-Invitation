@@ -53,3 +53,18 @@ main {
   align-self: center;
   flex-wrap: wrap;
 }
+
+footer {
+  width: 100%;
+  border-radius: 100% 100% 0 0;
+  background: #33415a;
+}
+
+footer p {
+  margin: 2rem 1vw 0;
+  color: white;
+  font-family: 'disneypark', serif, sans-serif, monospace;
+  font-size: min(2rem, 10vw);
+  font-style: italic;
+  text-align: center;
+}
