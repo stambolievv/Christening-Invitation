@@ -1,56 +1,31 @@
 #landing {
   display: flex;
-  justify-content: flex-start;
-  flex-flow: column;
-
-  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
-  padding: 0 20px;
-  background: url('/assets/images/glitter.png') no-repeat center center;
-  background-size: cover;
+
+  color: var(--clr-landing-text);
+  font-family: 'pudelinka', serif, sans-serif, monospace;
   text-align: center;
-  font-family: 'Eurof35', serif, sans-serif, monospace;
 }
 
 #landing .heading {
-  margin: auto;
-  color: var(--clr-secondary);
-  font-family: 'bridal', serif, sans-serif, monospace;
-  font-weight: 900;
-  font-size: 4em;
-  line-height: 2em;
+  margin: 0 10vw;
+  padding: 15vh 8vw 10vh;
+  min-width: 80vw;
+
+  font-size: min(10rem, min(20vw, 30vh));
+  line-height: 80%;
+  font-weight: 100;
+
+  background-color: var(--clr-background-bubble);
+  border-radius: 50px;
+  box-shadow: 10px 10px 40px var(--clr-background-bubble), -10px -10px 40px var(--clr-background-bubble);
 }
 
 #landing .heading span {
-  font-size: 1.5em;
-}
-
-@media only screen and (max-width: 900px) {
-  #landing .heading {
-    padding: 0;
-
-    font-size: 3em;
-    font-weight: 800;
-    line-height: 2em;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  #landing .heading {
-    padding: 0;
-
-    font-size: 2em;
-    font-weight: 600;
-    line-height: 2em;
-  }
-}
-
-@media only screen and (max-width: 300px) {
-  #landing .heading {
-    padding: 0;
-
-    font-size: 1.2em;
-    font-weight: 600;
-    line-height: 2em;
-  }
+  color: var(--clr-landing-name);
+  font-size: 150%;
+  line-height: 150%;
 }

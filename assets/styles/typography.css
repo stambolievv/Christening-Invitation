@@ -1,33 +1,31 @@
 @font-face {
-  font-family: 'bridal';
-  src: url('/assets/fonts/bridal.woff') format('woff');
+  font-family: 'disneypark';
+  src: url('/assets/fonts/disneypark.ttf') format('truetype');
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Calligraph';
-  src: url('/assets/fonts/Calligraph.woff') format('woff');
+  font-family: 'university-cyrillic';
+  src: url('/assets/fonts/university-cyrillic.ttf') format('truetype');
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Eurof35';
-  src: url('/assets/fonts/Eurof35.woff') format('woff');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Solena';
-  src: url('/assets/fonts/Solena.woff') format('woff');
+  font-family: 'pudelinka';
+  src: url('/assets/fonts/pudelinka.ttf') format('truetype');
   font-display: swap;
 }
 
 :root {
-  --clr-primary: #9c9c9c;
-  --clr-secondary: #710b04;
-  --clr-text: #c2c2c2;
-
-  color-scheme: dark only;
+  --clr-background-bubble: rgba(255 255 255 / 0.7);
+  --clr-landing-text: #33415a;
+  --clr-landing-name: #33415a;
+  --clr-invitation-text: #33415a;
+  --clr-invitation-name: #33415a;
+  --clr-program-text: #6591d4;
+  --clr-program-description: #33415a;
+  --clr-program-sub-description: #33415a;
+  --clr-program-map-name: #33415a;
 }
 
 *,
@@ -37,8 +35,22 @@
   padding: 0;
   box-sizing: border-box;
   user-select: none;
+  color-scheme: light only;
+  max-width: 100%;
 }
 
 body {
-  background-image: url('/assets/images/background.jpg');
+  background: url('/assets/images/background.png');
+  background-color: white;
+}
+
+main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  flex-wrap: wrap;
+  gap: 30vmax;
 }
