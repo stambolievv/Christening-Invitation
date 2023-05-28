@@ -31,6 +31,8 @@ export const invitation = (prop, path) => html`
       <h3 class="description">&ldquo;Сентрал Парк&rdquo;<br />Младежки хълм</h3>
       <p class="sub-description">12:30 часа</p>
     </article>
+  </section>
+  <section id="location">
     <img class="separator" src="${path}/assets/images/separator.png" alt="" />
     <div class="map-container">
       <h4 class="map-name">Карта към храм &ldquo;Успение Богородично&rdquo;</h4>

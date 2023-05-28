@@ -25,7 +25,7 @@
   --clr-program-text: #6591d4;
   --clr-program-description: #33415a;
   --clr-program-sub-description: #33415a;
-  --clr-program-map-name: #33415a;
+  --clr-location-text: #33415a;
 }
 
 *,
@@ -52,5 +52,4 @@ main {
   align-items: center;
   align-self: center;
   flex-wrap: wrap;
-  gap: 30vmax;
 }

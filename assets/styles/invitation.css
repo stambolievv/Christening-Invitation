@@ -2,6 +2,8 @@
   color: var(--clr-invitation-text);
   font-family: 'university-cyrillic', serif, sans-serif, monospace;
   text-align: center;
+
+  margin: 35vmax auto;
 }
 
 #invitation .content {
