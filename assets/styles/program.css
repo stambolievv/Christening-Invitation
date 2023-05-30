@@ -7,9 +7,7 @@
 
   margin: 0 10vw;
 
-  color: var(--clr-program-text);
-  font-family: 'disneypark', serif, sans-serif, monospace;
-  text-align: center;
+  font-family: 'disneypark', serif;
 }
 
 #program .headline {
@@ -17,7 +15,6 @@
   margin-bottom: 4rem;
 
   font-size: min(10rem, 30vw);
-  font-weight: 500;
 }
 
 #program article {
@@ -25,25 +22,21 @@
   align-self: stretch;
   margin: 0 1rem;
   padding: 2vw;
-
-  background-color: var(--clr-background-bubble);
-  border-radius: 50px;
-  box-shadow: 10px 10px 40px var(--clr-background-bubble), -10px -10px 40px var(--clr-background-bubble);
 }
 
 #program article .caption {
-  margin: 2rem 0;
+  margin: 2rem auto;
 
-  font-family: 'disneypark', serif, sans-serif, monospace;
+  color: var(--clr-primary-600);
+  font-family: 'disneypark', serif;
   font-size: min(9rem, 16vw);
   font-weight: 100;
 }
 
 #program article .description {
-  margin: 1.5rem 0;
+  margin: 1.5rem auto;
 
-  color: var(--clr-program-description);
-  font-family: 'university-cyrillic', serif, sans-serif, monospace;
+  font-family: 'university-cyrillic', serif;
   font-size: min(4rem, 10vw);
   font-weight: 100;
 }
@@ -52,7 +45,6 @@
   position: relative;
   margin-top: 0.5rem;
 
-  color: var(--clr-program-sub-description);
   font-size: min(2rem, 8vw);
   font-style: italic;
 }
@@ -65,5 +57,5 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--clr-program-sub-description);
+  background: var(--clr-primary-800);
 }

@@ -17,15 +17,12 @@
 }
 
 :root {
-  --clr-background-bubble: rgba(255 255 255 / 0.7);
-  --clr-landing-text: #33415a;
-  --clr-landing-name: #33415a;
-  --clr-invitation-text: #33415a;
-  --clr-invitation-name: #33415a;
-  --clr-program-text: #6591d4;
-  --clr-program-description: #33415a;
-  --clr-program-sub-description: #33415a;
-  --clr-location-text: #33415a;
+  --clr-primary-100: hsla(0, 0%, 100%, 1);
+  --clr-primary-200: hsla(0, 0%, 100%, 0.7);
+  --clr-primary-400: hsla(209, 73%, 88%, 1);
+  --clr-primary-600: hsla(216, 56%, 61%, 1);
+  --clr-primary-800: hsla(218, 28%, 28%, 1);
+  --clr-primary-900: hsla(0, 0%, 0%, 1);
 }
 
 *,
@@ -35,13 +32,22 @@
   padding: 0;
   box-sizing: border-box;
   user-select: none;
-  color-scheme: light only;
-  max-width: 100%;
+}
+
+html {
+  color-scheme: only light;
 }
 
 body {
+  color: var(--clr-primary-800);
+  text-align: center;
   background: url('/assets/images/background.png');
-  background-color: white;
+  background-color: var(--clr-primary-400);
+}
+
+img {
+  max-width: 100%;
+  display: inline-block;
 }
 
 main {
@@ -62,10 +68,16 @@ footer {
 
 footer p {
   margin: 2vh;
-  color: white;
-  font-family: 'disneypark', serif, sans-serif, monospace;
+  color: var(--clr-primary-100);
+  font-family: 'disneypark', serif;
   font-size: min(2rem, 8vw);
   line-height: 80%;
   font-style: italic;
   text-align: center;
+}
+
+._background-cloud {
+  background-color: var(--clr-primary-200);
+  border-radius: 50px;
+  box-shadow: 10px 10px 40px var(--clr-primary-200), -10px -10px 40px var(--clr-primary-200);
 }

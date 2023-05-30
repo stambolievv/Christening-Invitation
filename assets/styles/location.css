@@ -6,17 +6,12 @@
 
   margin: 0 10vw;
 
-  color: var(--clr-location-text);
-  font-family: 'university-cyrillic', serif, sans-serif, monospace;
+  font-family: 'university-cyrillic', serif;
   text-align: center;
 }
 
 #location .map-container {
   padding: 0.5rem;
-
-  background-color: var(--clr-background-bubble);
-  border-radius: 50px;
-  box-shadow: 10px 10px 40px var(--clr-background-bubble), -10px -10px 40px var(--clr-background-bubble);
 }
 
 #location .map-name {
