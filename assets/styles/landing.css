@@ -3,8 +3,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 100vh;
-  min-height: 100vh;
+  max-width: 100%;
+  min-height: 100vh; /* fallback */
+  min-height: 100dvh; /* for newer browsers */
 
   font-family: 'pudelinka', serif;
 }
