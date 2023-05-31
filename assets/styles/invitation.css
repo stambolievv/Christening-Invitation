@@ -1,13 +1,11 @@
 #invitation {
-  max-width: 100%;
-  margin: 35vmax auto;
+  margin-block: 25vmax;
 
   font-family: 'university-cyrillic', serif;
 }
 
 #invitation .content {
-  margin: 0 2rem;
-  padding: 5vw;
+  width: 100%;
   min-width: 60vw;
 
   font-size: min(4rem, 10vw);
@@ -15,19 +13,16 @@
 }
 
 #invitation p {
-  margin: 1.5rem auto;
+  margin-block: 5%;
 }
 
-#invitation span.recipient,
-#invitation input.recipient {
-  margin-top: 2rem;
-  line-height: 100%;
-  color: var(--clr-invitation-name);
-  font-size: inherit;
+#invitation .recipient {
+  display: inline-block;
   font-family: 'pudelinka', serif;
 }
 
 #invitation input.recipient {
-  max-width: 25%;
+  max-width: 40%;
   background-color: transparent;
+  font-size: inherit;
 }

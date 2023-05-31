@@ -1,55 +1,50 @@
 #program {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  flex-direction: row;
   flex-wrap: wrap;
-  gap: 10vh;
 
-  margin: 0 10vw;
+  gap: 10vmax;
 
   font-family: 'disneypark', serif;
 }
 
 #program .headline {
   width: 100%;
-  margin-bottom: 4rem;
+  margin-block-end: 10%;
 
   font-size: min(10rem, 30vw);
 }
 
-#program article {
-  flex: 1 1 auto;
+#program .card {
+  flex: 1;
   align-self: stretch;
-  margin: 0 1rem;
-  padding: 2vw;
 }
 
-#program article .caption {
-  margin: 2rem auto;
-
+#program .card .caption {
   color: var(--clr-primary-600);
-  font-family: 'disneypark', serif;
   font-size: min(9rem, 16vw);
-  font-weight: 100;
+  font-weight: normal;
 }
 
-#program article .description {
-  margin: 1.5rem auto;
+#program .card .icon {
+  margin-block: 5%;
+}
+
+#program .card .description {
+  margin-block-end: 5%;
 
   font-family: 'university-cyrillic', serif;
   font-size: min(4rem, 10vw);
-  font-weight: 100;
+  font-weight: normal;
 }
 
-#program article .sub-description {
+#program .card .sub-description {
   position: relative;
-  margin-top: 0.5rem;
 
   font-size: min(2rem, 8vw);
   font-style: italic;
 }
 
-#program article .sub-description::before {
+#program .card .sub-description::before {
   content: '';
   position: absolute;
   width: 50%;

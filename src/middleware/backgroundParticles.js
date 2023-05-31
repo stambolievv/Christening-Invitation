@@ -46,7 +46,8 @@ class BackgroundParticles {
       overflow: 'hidden'
     });
 
-    container.appendChild(this.#container);
+    this.#applyStyle(container.parentElement, { position: 'relative' });
+    container.parentElement.appendChild(this.#container);
   }
 
   /**

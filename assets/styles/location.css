@@ -1,44 +1,28 @@
-#location {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
+#location .map-container {
+  width: 100%;
+}
 
-  margin: 0 10vw;
+#location .map-container .map-name {
+  margin-block: 1%;
 
   font-family: 'university-cyrillic', serif;
-  text-align: center;
-}
-
-#location .map-container {
-  padding: 0.5rem;
-}
-
-#location .map-name {
-  margin: 1rem auto;
-  padding: 0 2vw;
-
   font-size: min(3rem, 10vw);
-  font-weight: 100;
+  font-weight: normal;
   font-style: italic;
 }
 
-#location .map {
-  padding: 2vw;
+#location .map-container .map {
   width: 100%;
   height: 60vh;
-  min-width: 60vw;
+  max-width: 1000px;
+
   border: none;
 }
 
 #location .separator {
-  position: relative;
-  margin: 10vmax 100%;
-  width: 100%;
-  height: auto;
-  max-width: 800px;
+  margin-block: min(20vw, 20%);
 }
 
 #location .separator:last-child {
-  margin: 7rem 100% 0;
+  margin-block-end: 0;
 }

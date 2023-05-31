@@ -1,23 +1,20 @@
 #landing {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   max-width: 100%;
-  min-height: 100vh; /* fallback */
-  min-height: 100dvh; /* for newer browsers */
+  min-height: 100vh;
 
   font-family: 'pudelinka', serif;
 }
 
 #landing .heading {
-  margin: 0 10vw;
-  padding: 15vh 8vw 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   min-width: 80vw;
+  min-height: 80vh;
 
   font-size: min(10rem, min(20vw, 30vh));
   line-height: 80%;
-  font-weight: 100;
+  font-weight: normal;
 }
 
 #landing .heading span {
