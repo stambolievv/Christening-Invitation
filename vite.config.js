@@ -52,6 +52,6 @@ export default defineConfig({
     createHtmlPlugin({ minify: true }),
   ],
   define: {
-    APP_HOST_URL: `${publicPath.slice(0, -1)}`,
+    APP_HOST_URL: `${publicPath.slice(0, -1) || (() => { })}`,
   }
 });
