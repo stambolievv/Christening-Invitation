@@ -1,7 +1,2 @@
-import { decorateContext } from './context';
-import { initParticles } from './backgroundParticles';
-
-export {
-  decorateContext,
-  initParticles,
-};
+export { decorateContext } from './context';
+export { initParticles } from './backgroundParticles';
