@@ -28,11 +28,10 @@ class BackgroundParticles {
   /**
    * @description Creates an instance of BackgroundParticles.
    * @param {object} options - The options for configuring the animation.
-   * @param {HTMLElement} options.container - The container element for the animation.
    * @param {object} options.config - The configuration options for the animation.
    * @constructor
    */
-  constructor({ container, config }) {
+  constructor({ config }) {
     this.#container = document.createElement('div');
     this.#config = config;
 
@@ -46,8 +45,8 @@ class BackgroundParticles {
       overflow: 'hidden'
     });
 
-    this.#applyStyle(container.parentElement, { position: 'relative' });
-    container.parentElement.appendChild(this.#container);
+    this.#applyStyle(document.body, { position: 'relative' });
+    document.body.appendChild(this.#container);
   }
 
   /**
@@ -100,8 +99,10 @@ class BackgroundParticles {
    * @returns {Array<Particle>} An array of particle objects with image and offset properties.
    */
   #generateParticlesElements(images) {
-    const landingPageHeight = document.getElementById('landing').offsetHeight;
+    const landingPage = document.getElementById('landing');
     const result = [];
+
+    if (!landingPage) return result;
 
     for (let i = 0; i < this.#config.amountOfParticles; i++) {
       const randomIndex = Math.floor(this.#getRandomFloat(0, images.length));
@@ -109,8 +110,8 @@ class BackgroundParticles {
       const particle = this.#resetParticle({ image: /** @type {HTMLImageElement} */ (image) });
 
       particle.offset = this.#getRandomFloat(
-        -(this.#container.offsetHeight - landingPageHeight),
-        landingPageHeight,
+        -(this.#container.offsetHeight - landingPage.offsetHeight),
+        landingPage.offsetHeight,
       );
 
       result.push(particle);
@@ -150,10 +151,10 @@ class BackgroundParticles {
   #resetParticle(particle) {
     const { speed, scale, opacity } = this.#config;
 
-    particle.offset = particle.image.height;
+    particle.offset = particle.image?.height;
     particle.speed = this.#getRandomFloat(speed.min, speed.max);
 
-    this.#applyStyle(particle.image, {
+    particle.image && this.#applyStyle(particle.image, {
       left: `${this.#getRandomFloat(-particle.image.width / 2, this.#container.offsetWidth - particle.image.width / 2)}px`,
       scale: this.#getRandomFloat(scale.min, scale.max).toString(),
       opacity: this.#getRandomFloat(opacity.min, opacity.max).toString(),
@@ -191,10 +192,7 @@ export function initParticles(ctx, next) {
   const { backgroundParticles: { source, ...rest } } = config;
 
   const assets = source.map(src => `${ctx.baseUrl}/assets/images/${src}`);
-  const particles = new BackgroundParticles({
-    container: ctx.root,
-    config: rest,
-  });
+  const particles = new BackgroundParticles({ config: rest });
 
   particles.load(assets).then(() => particles.start());
 
